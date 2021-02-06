@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Save And Remove User View Controller-->
+        <scene sceneID="bms-FU-07T">
+            <objects>
+                <viewController storyboardIdentifier="SaveAndRemoveUserViewController" id="NbD-9O-71w" customClass="SaveAndRemoveUserViewController" customModule="RandomUser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" tag="3" contentMode="scaleToFill" id="ums-ha-UVP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="mutedStandard" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5wU-BS-fUe">
+                                <rect key="frame" x="0.0" y="44" width="414" height="193"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="193" id="L23-iJ-fa6"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="NbD-9O-71w" id="oMf-P6-ABS"/>
+                                </connections>
+                            </mapView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HVG-5N-HwQ">
+                                <rect key="frame" x="147" y="177" width="120" height="120"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="30B-21-P1Z"/>
+                                    <constraint firstAttribute="width" constant="120" id="V1k-sK-lcR"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="60"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jim-nt-rix">
+                                <rect key="frame" x="147" y="177" width="120" height="120"/>
+                                <connections>
+                                    <action selector="showDetailsImageGesture:" destination="NbD-9O-71w" eventType="touchUpInside" id="hYZ-3V-OHL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DY4-Dw-41S" userLabel="Name Label">
+                                <rect key="frame" x="183" y="309" width="48" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ea-ef-N2P">
+                                <rect key="frame" x="191.5" y="336" width="31" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ce-8e-hEV">
+                                <rect key="frame" x="82" y="699" width="250" height="48"/>
+                                <color key="backgroundColor" name="greenButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="0el-4T-WWb"/>
+                                    <constraint firstAttribute="width" constant="250" id="t4w-WK-Chm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Save user">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="selected" title="User saved">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveUserButtonAction:" destination="NbD-9O-71w" eventType="touchUpInside" id="SnH-qu-Lpm"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UuQ-Kx-1zE">
+                                <rect key="frame" x="160" y="767" width="94" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Remove user">
+                                    <color key="titleColor" red="0.85569840669999997" green="0.38115364309999999" blue="0.36076140400000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="remopveUserButtonAction:" destination="NbD-9O-71w" eventType="touchUpInside" id="8sF-Cg-Gmw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="30w-ts-sl4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3Ea-ef-N2P" firstAttribute="centerX" secondItem="30w-ts-sl4" secondAttribute="centerX" id="5yH-3u-quw"/>
+                            <constraint firstItem="HVG-5N-HwQ" firstAttribute="centerX" secondItem="30w-ts-sl4" secondAttribute="centerX" id="MnM-0m-5nK"/>
+                            <constraint firstItem="jim-nt-rix" firstAttribute="centerX" secondItem="HVG-5N-HwQ" secondAttribute="centerX" id="OFX-Fg-VRB"/>
+                            <constraint firstItem="30w-ts-sl4" firstAttribute="trailing" secondItem="5wU-BS-fUe" secondAttribute="trailing" id="Phc-yo-Fk0"/>
+                            <constraint firstItem="30w-ts-sl4" firstAttribute="bottom" secondItem="UuQ-Kx-1zE" secondAttribute="bottom" constant="63" id="PkC-PR-eLx"/>
+                            <constraint firstItem="DY4-Dw-41S" firstAttribute="centerX" secondItem="30w-ts-sl4" secondAttribute="centerX" id="QiZ-FN-P6S"/>
+                            <constraint firstItem="jim-nt-rix" firstAttribute="width" secondItem="HVG-5N-HwQ" secondAttribute="width" id="RB6-UU-lmO"/>
+                            <constraint firstItem="9ce-8e-hEV" firstAttribute="centerX" secondItem="30w-ts-sl4" secondAttribute="centerX" id="Rvm-6S-ClL"/>
+                            <constraint firstItem="HVG-5N-HwQ" firstAttribute="centerY" secondItem="5wU-BS-fUe" secondAttribute="bottom" id="SU5-vj-NlO"/>
+                            <constraint firstItem="5wU-BS-fUe" firstAttribute="top" secondItem="30w-ts-sl4" secondAttribute="top" id="Tmn-no-oYH"/>
+                            <constraint firstItem="jim-nt-rix" firstAttribute="centerY" secondItem="HVG-5N-HwQ" secondAttribute="centerY" id="WGl-07-scf"/>
+                            <constraint firstItem="3Ea-ef-N2P" firstAttribute="top" secondItem="DY4-Dw-41S" secondAttribute="bottom" constant="3" id="Z2a-cr-9Ca"/>
+                            <constraint firstItem="DY4-Dw-41S" firstAttribute="top" secondItem="HVG-5N-HwQ" secondAttribute="bottom" constant="12" id="abI-dR-KCN"/>
+                            <constraint firstItem="UuQ-Kx-1zE" firstAttribute="centerX" secondItem="30w-ts-sl4" secondAttribute="centerX" id="chO-1D-7QY"/>
+                            <constraint firstItem="5wU-BS-fUe" firstAttribute="leading" secondItem="30w-ts-sl4" secondAttribute="leading" id="nVG-c5-UnW"/>
+                            <constraint firstItem="UuQ-Kx-1zE" firstAttribute="top" secondItem="9ce-8e-hEV" secondAttribute="bottom" constant="20" id="wja-2H-z2z"/>
+                            <constraint firstItem="jim-nt-rix" firstAttribute="height" secondItem="HVG-5N-HwQ" secondAttribute="height" id="xjp-Lb-fWm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="3Ea-ef-N2P" id="tIu-CA-2Dp"/>
+                        <outlet property="mapView" destination="5wU-BS-fUe" id="Wp8-lN-Yrn"/>
+                        <outlet property="nameLabel" destination="DY4-Dw-41S" id="juz-xC-MbQ"/>
+                        <outlet property="remopveUserButton" destination="UuQ-Kx-1zE" id="k3g-7Y-ok3"/>
+                        <outlet property="saveUserButton" destination="9ce-8e-hEV" id="aig-01-bPU"/>
+                        <outlet property="userImageView" destination="HVG-5N-HwQ" id="mwe-l0-sGL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bot-Q1-axN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-215.94202898550725" y="-98.4375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="greenButton">
+            <color red="0.070588235294117646" green="0.89411764705882357" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
